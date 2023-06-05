@@ -1,4 +1,4 @@
-# EncryptedPasswordManager
+# Encrypted Password Manager
 
 This is a password manager application which provides a secure way to store passwords. This application uses the tkinter library for its graphical user interface and the cryptography library to securely store passwords.
 
