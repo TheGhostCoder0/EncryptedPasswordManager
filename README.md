@@ -8,7 +8,7 @@ This is a password manager application which provides a secure way to store pass
 - **Local Storage**: Encrypted passwords are stored locally in a JSON file, which is a lightweight and widely used data-interchange format that is easy to read and write.
 - **UI**: This password manager uses a graphical user interface (GUI) made with the tkinter library to make it user friendly and easy to use.
 
-## Requirements
+## Dependencies
 
 This project requires Python 3, as well as the following Python libraries:
 
@@ -17,6 +17,7 @@ This project requires Python 3, as well as the following Python libraries:
 - json
 - cryptography
 - bcrypt
+- PIL
 
 You can install these libraries using pip:
 
@@ -25,6 +26,7 @@ pip install tk
 pip install pyperclip
 pip install cryptography
 pip install bcrypt
+pip install pillow
 ```
 ## Setup
 
