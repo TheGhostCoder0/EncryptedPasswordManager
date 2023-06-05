@@ -5,6 +5,7 @@ import pyperclip
 import json
 from cryptography.fernet import Fernet
 import bcrypt
+from PIL import Image, ImageTk
 
 # ---------------------------- CONSTANTS ------------------------------- #
 FONT = ("Helvetica", 14, "normal")
@@ -132,9 +133,11 @@ if password_check():
     window.config(padx=50, pady=50, bg=WHITE)
 
     # Logo
-    logo_img = PhotoImage(file="logo.png")
-    canvas = Canvas(width=200, height=200, bg=WHITE, highlightthickness=0)
-    canvas.create_image(100, 100, image=logo_img)
+    logo_img = Image.open("logo2.png")  # Using PIL to open
+    logo_img = logo_img.resize((100, 100), Image.ANTIALIAS)  # Resize the image
+    logo_img = ImageTk.PhotoImage(logo_img)  # Convert the Image object into a PhotoImage object
+    canvas = Canvas(width=200, height=200, bg="white", highlightthickness=0)  # Adjusting canvas size
+    canvas.create_image(100, 100, image=logo_img)  # Adjust the center of image
     canvas.grid(row=0, column=1)
 
     # Labels
